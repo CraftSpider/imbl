@@ -55,3 +55,6 @@ pretty_assertions = "1.0"
 metrohash = "1"
 proptest-derive = "0.4"
 static_assertions = "1.1.0"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(has_specialisation)', 'cfg(feature, values("pool"))'] }
